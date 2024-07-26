@@ -1,0 +1,15 @@
+apiVersion: score.dev/v1b1
+
+metadata:
+  name: sample-golang
+
+containers:
+  sample:
+    image: sample-golang
+    variables:
+      PORT: "8080"
+service:
+  ports:
+    web:
+      port: 8080
+      targetPort: 8080
